@@ -1,6 +1,8 @@
 # neume
 
-曲谱Web前端H5展示方案：播放mp3同步svg图像中的位置。解决方案目标涵盖西方古典五线谱，现代流行六线谱，中国民乐简谱。
+曲谱Web前端H5展示方案：播放mp3同步svg图像中的位置。
+
+解决方案目标涵盖西方古典五线谱，现代流行六线谱，中国民乐简谱。
 
 支持电脑，平板，手机屏，实现自适应的读谱聆曲和视奏功能，持续迭代更新中。
 
@@ -8,9 +10,11 @@
 
 
 
-Music score on Web frontend with Html5 resolution: play mp3 file sync with the position in svg images.The resolution aims to 
+Music score on Web frontend with Html5 resolution: play mp3 file sync with the position in svg images.
 
-include western classic music with 5staves, modern popular tune with 6staves and Chinese classic numbered music notation.
+The resolution aims to include western classic music with 5staves, modern popular tune with 6staves 
+
+and Chinese classic numbered music notation.
 
 Supporting large, medium and small screen, realizeing responsive product of playing and practicing and being updating.
 
