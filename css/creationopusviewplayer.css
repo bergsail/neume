@@ -1,0 +1,535 @@
+body {
+  margin:0px;
+  height:100vh;
+  overflow: hidden;
+}
+
+progress {
+  vertical-align: center;
+}
+
+.txt {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    cursor: default;
+}
+
+/*   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+.tools-bar {
+    width: 100%;
+    height:35px;
+    z-index: 100;
+    font-family: "微软雅黑","Microsoft YaHei";
+
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.tools-bar .left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    margin-left: -432px;
+    font-size: 14px;
+    background-color: #FFFFFF;
+    -webkit-transition: width 200ms linear;
+    -moz-transition: width 200ms linear;
+    -ms-transition: width 200ms linear;
+    -o-transition: width 200ms linear;
+    transition: width 200ms linear;
+}
+
+.tools-bar .left .back-wrap {
+    position: relative;
+
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left:432px;
+    z-index: 1;
+}
+
+.tools-bar .left a {
+    text-decoration: none;
+    outline: 0 none;
+}
+
+.tools-bar .left .back-wrap .back .back-ic {
+    display: -moz-inline-stack;
+    display: inline-block;
+    padding: 0;
+    vertical-align: -2px;
+    font-size: 0;
+    line-height: 9999em;
+    overflow: hidden;
+    position: relative;
+    width: 16px;
+    height: 16px;
+}
+
+.tools-bar .left .back-wrap .back .back-ic {
+    background-image: url("http://staticwebpage.bj.bcebos.com/public/bg.png");
+    background-repeat: no-repeat;
+    _background-image: url("http://staticwebpage.bj.bcebos.com/public/bg_ie6.png");
+    width: 16px;
+    height: 16px;
+    vertical-align: 3px;
+    background-position: 0px 0;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2), not all {
+  .tools-bar .left .back-wrap .back .back-ic {
+    background-image: url("http://staticwebpage.bj.bcebos.com/public/bg_retina.png")!important;
+    background-size: 310px 432px!important;
+  }
+}
+
+.tools-bar .left .back-wrap:hover .back .back-ic{
+  background-position: -72px 0;
+}
+
+.tools-bar .left .back-wrap .back .back-text {
+    display: inline;
+    position: relative;
+    top: -5px;
+    text-decoration: none;
+    color: #c7c7c1;
+}
+
+.tools-bar .left .back-wrap:hover .back-text {
+  color: #998811;
+}
+
+.tools-bar .center {
+    position: relative;
+    width: 864px;
+    height: 35px;
+    line-height: 35px;
+    overflow: hidden;
+    margin: auto;
+    background-color: #515151;
+    box-shadow: -7px 0 7px -7px rgba(51,51,51,.07),7px 0 7px -7px rgba(51,51,51,.07);
+    border: #333333 1px solid;
+}
+
+.tools-bar .center  .title {
+    width: 60%;
+    float: left;
+}
+.tools-bar .center .title .title-text {
+    margin-left: 10px;
+    text-align: left;
+    color: #E5E5E5;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.tools-bar .center .percent {
+    width: 10%;
+    float: right;
+    height: 100%;
+}
+
+.tools-bar .center .percent .percent-text {
+    margin-right: 10px;
+    text-align: right;
+    color: #b2afa1;
+    font-size: 12px;
+}
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+.sheet-canvas-wrap {
+  width:864px;
+  height:calc(98vh - 25px);
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top: 36px;
+  overflow-y:auto;
+  overflow-x:hidden;
+  background-color: #ffffff;
+
+}
+
+.sheet-canvas-wrap .sheet-canvas {
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-right: 10px;
+  offset:0;
+  /*width: 846px;*/
+  /*height:1132px;*/
+
+  border:#909090 1px solid;
+  background:#fff;
+  color:#333;
+  filter:progid:DXImageTransform.Microsoft.Shadow(color=#909090,direction=120,strength=3);/*ie*/
+  -moz-box-shadow: 1px 1px 20px #909090;/*firefox*/
+  -webkit-box-shadow: 1px 1px 20px #909090;/*safari或chrome*/
+  box-shadow:1px 1px 20px #909090;/*opera或ie9*/
+
+}
+
+/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+.song-list-wrap {
+  display: block;
+  width: calc(50vw - 432px + 5px);
+  height: 225px;
+  background: url("http://staticwebpage.bj.bcebos.com/public/overlay.png") repeat;
+  position: fixed;
+  left: 0;
+  bottom:54px;
+  z-index: 1000;
+}
+
+.song-list-wrap ul{
+  margin: 0;
+  padding: 0;
+  width:100%;
+  height:225px;
+  /*overflow: hidden;*/
+}
+
+.song-list-wrap ul .song-item{
+  display: block;
+   position: relative;
+  float:left;
+  /*padding:4px 8px; */
+  width:100%;
+  height: 54px;
+  padding: 0;
+
+  border: solid 1px gray;
+}
+
+.song-list-wrap .song-item .album-pic {
+  position: absolute;
+  width:54px;
+  height:54px;
+}
+.song-list-wrap .song-item .album-pic img {
+  width:100%;
+  height:100%;
+}
+
+.song-list-wrap .song-item .album-name {
+  position: absolute;
+  margin-left:65px;
+  color: #d3d3d3;
+  font-size: 13px;
+   height:20px; 
+  line-height:20px; 
+  /*margin-top:5px;*/
+}
+
+.song-list-wrap .song-item .album-player {
+  position: absolute;
+  margin-left: 65px;
+  color:#d3d3d3;
+  font-size:11px;
+  height:20px; 
+  line-height:20px; 
+  margin-top:20px;
+}
+
+.song-list-wrap .song-item .album-player p {
+  margin:0;
+  padding:0;
+}
+/*.song-list-wrap .song-list li a {
+  display:block;
+  width:100%; 
+ 
+  background:#F6F6F6
+}
+
+.song-list-wrap .song-list li p {
+  display:block;
+  width:100%; 
+
+  background:#F6F6F6
+}*/
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+.bottom-control-panel {
+  display: block;
+  width: 100%;
+  height: 54px;
+  background: url("http://staticwebpage.bj.bcebos.com/public/overlay.png") repeat;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 1000;
+}
+
+/*    ul.imglist{ margin:0 auto; width:536px; overflow:hidden} 
+    ul.imglist li{ } 
+    ul.imglist li img{ display:block; width:160px; height:90px} 
+    ul.imglist li span{ display:block; width:100%; height:30px; line-height:30px; background:#F6F6F6} 
+*/
+
+
+.bottom-control-panel  .song-info {
+
+  position: relative;
+  float:left;
+  width: calc(50vw - 432px);
+  height: 54px;
+}
+
+
+.bottom-control-panel .song-info .album-pic {
+  position: absolute;
+  width:54px;
+  height:54px;
+}
+
+.bottom-control-panel .song-info img {
+
+    /*display: inline;*/
+    height:100%;
+    width: 100%;
+    margin: auto;
+}
+
+.bottom-control-panel .song-info .album-name {
+
+  float:left;
+  position: absolute;
+  margin-left: 65px;
+  width:calc(50vw - 432px - 55px);
+  height: 20px;
+  line-height: 20px;
+  color: #ffffff;
+  /*text-align: 30px;*/
+  font-size: 14px;
+}
+
+.bottom-control-panel .song-info .album-player {
+  float:left;
+  position: absolute;
+  margin-left:65px;
+  margin-top:20px;
+  width:calc(50vw - 432px - 55px);
+  height:20px;
+  line-height: 20px;
+  color:#ffffff;
+  /*text-align: 20px;*/
+  font-size: 12px;
+}
+
+
+.bottom-control-panel .song-info .album-player p{
+  margin:0;
+  padding:0;
+}
+
+
+
+/* play control*/
+.bottom-control-panel .song-control {
+  position:relative;
+  width: 864px;
+  height:100%;
+  margin:auto;
+}
+
+.bottom-control-panel .song-control .play-ic {
+
+    position: absolute;
+    top:0;
+    left:0;
+
+    background-image: url("http://staticwebpage.bj.bcebos.com/public/bg.png");
+    background-repeat: no-repeat;
+    _background-image: url("http://staticwebpage.bj.bcebos.com/public/bg_ie6.png");
+    width: 42px;
+    height: 42px;
+    margin-top: 6px;
+    margin-left:12px;
+    background-position: -72px -72px;
+}
+
+/*play pause button*/
+.bottom-control-panel .song-control .pause-ic {
+    position: absolute;
+    top:0;
+    left:0;
+    background-image: url("http://staticwebpage.bj.bcebos.com/public/bg.png");
+    background-repeat: no-repeat;
+    _background-image: url("http://staticwebpage.bj.bcebos.com/public/bg_ie6.png");
+    width: 42px;
+    height: 42px;
+    margin-top: 6px;
+    margin-left:12px;
+    background-position: 0px -144px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2), not all {
+  .bottom-control-panel .song-control .play-ic{
+    background-image: url("http://staticwebpage.bj.bcebos.com/public/bg_retina.png")!important;
+    background-size: 310px 432px!important;
+  }
+  .bottom-control-panel .song-control .pause-ic{
+    background-image: url("http://staticwebpage.bj.bcebos.com/public/bg_retina.png")!important;
+    background-size: 310px 432px!important;
+  }
+}
+.bottom-control-panel .song-control .pause-ic:hover {
+    background-position: -72px -144px;
+}
+
+/*progress and time*/
+.bottom-control-panel .song-control .progress-wrap {
+  position:absolute;
+  width: 50%;
+  height:54px;
+  margin-left: 60px;
+  line-height: 40px;
+}
+
+.bottom-control-panel .song-control .progress {
+  width:100%;
+  height:100%;
+  position: relative;
+}
+
+.bottom-control-panel .song-control .progress-wrap .progress .progress-image {
+  position: absolute;
+  margin-top: 22px;
+  margin-left:0;
+  background-image: url("http://staticwebpage.bj.bcebos.com/public/bg.png");
+  background-repeat: no-repeat;
+   _background-image: url("http://staticwebpage.bj.bcebos.com/public/bg_ie6.png");
+   vertical-align: center;
+
+  width: 10px;
+  height: 10px;
+  /*vertical-align: 5px;*/
+  background-position: 0px -216px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2), not all {
+ 
+  .bottom-control-panel .song-control .progress-wrap .progress .progress-image{
+    background-image: url("http://staticwebpage.bj.bcebos.com/public/bg_retina.png")!important;
+    background-size: 310px 432px!important;
+  }
+
+}
+
+
+.bottom-control-panel .song-control .progress-wrap .progress .time-bar {
+   position: absolute;
+   margin-top: 25px;
+    height:2px;
+    width: 100%;
+    border: 1px solid #d7d7d1;  
+    background-color:#c7c7c1;
+    color: #c1b561; 
+    vertical-align: center;
+    line-height: 54px;
+}
+.bottom-control-panel .song-control .progress-wrap .progress .time-bar .time-bar-progress{
+  width:0;
+  height:100%;
+  background-color: #998811;
+}
+
+
+
+.bottom-control-panel .song-control .time-total-wrap {
+  position:absolute;
+  height:54px;
+  margin-left: calc(50% + 75px);
+  line-height: 54px;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+/* sns*/
+
+.bottom-control-panel .song-control .song-sns {
+
+  float: right;
+  position: relative;
+  height:54px;
+  width: 22%;
+}
+
+.bottom-control-panel .song-control .song-sns .collect-ic {
+  position: absolute;
+  display: inline-block;
+  margin-left: 30%;
+  margin-top:16px;
+  background-image: url("http://staticwebpage.bj.bcebos.com/public/bg.png");
+  background-repeat: no-repeat;
+  _background-image: url("http://staticwebpage.bj.bcebos.com/public/bg_ie6.png");
+  width: 18px;
+  height: 22px;
+  vertical-align: 2px;
+  background-position: 0px -360px;
+}
+
+.bottom-control-panel .song-control .song-sns .download-ic {
+  position: absolute;
+  display: inline-block;
+  margin-left: 60%;
+  margin-top:18px;
+  background-image: url("http://staticwebpage.bj.bcebos.com/public/bg.png");
+  background-repeat: no-repeat;
+  _background-image: url("http://staticwebpage.bj.bcebos.com/public/bg_ie6.png");
+  width: 18px;
+  height: 18px;
+  vertical-align: 5px;
+  background-position: 0px -288px;
+}
+/*
+#Music {
+  width:100%;
+  height:100%;
+}*/
+
+
+
+
+
+@media screen and (min-width:320px) and (max-width:1024px){
+
+.tools-bar .left {
+  float: left;
+  width: 24px;
+}
+
+.tools-bar .left .back-wrap .back .back-ic {
+  margin-left: 4px;
+}
+
+.tools-bar .left .back-wrap .back .back-text{
+  display: none;
+}
+
+.tools-bar .center {
+  width:100%;
+}
+
+.tools-bar .center .title .title-text {
+    margin-left: 34px;
+}
+
+.sheet-canvas-wrap {
+  width:100%;
+}
+
+.sheet-canvas-wrap .sheet-canvas {
+  width: calc(100% - 18px);
+}
+
+
+}
+
+

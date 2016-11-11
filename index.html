@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="曲谱" />
+    <meta name="description" content="Opus View" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>曲谱页</title>
+
+    <link rel="stylesheet" type="text/css" href="css/creationopusviewframe.css" />
+
+
+
+</head>
+<body>
+    <div class="tools-bar" id="top-bar-fixed">
+        <div class="left">
+            <div class="item-wrap back-wrap">
+                <a href="#" class="back">
+                    <!-- <b class="back-ic"></b> -->
+                    <!-- <span class="back-text">退出读谱</span> -->
+                </a>
+            </div>
+        </div>
+
+        <div class="center">
+            <div class="title">
+                <div class="title-text">歌剧<<卡门>> 第一幕第5曲 哈巴涅拉 比才曲
+                </div>
+            </div>
+            <div class="percent">
+                <div class="percent-text">
+                    <span>第
+                    <span id="opus-current-page">1</span>
+                    <span>页 / 共</span>
+                    <span id="opus-total-page">0</span>
+                    <span>页</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container">
+      <div class = "sheet-canvas-wrap" id="sheet-canvas-wrap">
+
+      </div>
+    </div>
+
+    <div class = "song-list-wrap" id="song-list-wrap">
+        <ul> 
+           <li class = "song-item" id = "song-item0" page-size = "10" opus-id = "0000001"  opus-name = "Bizet_Carmen_Habanera_VoilinCello" opus-active = "true">
+          
+                   <div class="album-pic">
+                        <img src="http://staticwebpage.bj.bcebos.com/temp/0000001/Bizet_Carmen_Habanera_VoilinCello/album.jpg" alt="">
+                   </div>
+                   <div class = "album-name">
+                        <a style="">
+                          歌剧<<卡门>> 第一幕第5曲 哈巴涅拉 比才曲
+                        </a>
+                   </div>
+                   <div class = "album-player">
+                        <p>bergsail</p>
+                   </div>
+        
+           </li> 
+        </ul> 
+    </div>
+
+    <div class = "bottom-control-panel">
+
+        <div class = "song-info" id = "current-song" opusid = "0000001" opus-name = "Bizet_Carmen_Habanera_VoilinCello">
+
+        </div>
+        <div class = "song-control">
+            <div id="audioplayer">
+            </div>
+            <div class = "play-ic" id = "play-ic" style="cursor:pointer"></div>
+            <div class = "pause-ic" id = "pause-ic" style="cursor:pointer"></div>
+            <div class = "progress-wrap">
+                <div class = "progress" id = "progress"> 
+                   <div class="time-bar" value="77" max="100" percent="77%">
+                      <div class = "time-bar-progress" id ="time-bar-progress" ></div>
+                   </div> 
+                   <div class = "progress-image" id = "progress-ic"></div>
+                </div>
+            </div>
+            <div class = "time-total-wrap">
+                <span class="time-current">00:00</span>
+                <span> / </span>
+                <span class="time-total">00:00</span>
+            </div>
+            <div class = "song-sns" data-collect="<?=$feedFavored?>" dataid="<?=$model->opus_feedid?>">
+               <div class = "collect-ic" style="cursor:pointer">
+               </div>
+               <div class = "collect-ic-active" style="cursor:pointer">
+               </div>
+               <a class = "download-ic" style="cursor:pointer" href="#">
+               </a>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/creationopusview.jquery.min.js" ></script>
+    <script type="text/javascript" src="js/creationopusview.jquery.jplayer.min.js" ></script>
+    <script type="text/javascript" src="js/creationopusview.snap.svg-min.js" ></script>
+    <script type="text/javascript" src="js/creationopusviewuiassist.js" ></script>
+    <script type="text/javascript" src="js/creationopusviewplayer.js" ></script>
+</body>
+</html>
