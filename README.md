@@ -20,9 +20,9 @@ Supporting large, medium and small screen, realizeing responsive product of play
 
 and being updating.
 
-With music information data supporting, users are allowed to get the struction of notation ,
+With music information data supporting, users are allowed to get the struction of notation , postion of notation 
 
-postion of notation charactor, time serialized midi information and cross-platform notation charactor display resolution.
+charactor, time serialized midi information and cross-platform notation charactor display resolution.
 
 
 
