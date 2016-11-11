@@ -16,11 +16,13 @@ The resolution aims to include western classic music with 5staves, modern popula
 
 and Chinese classic numbered music notation.
 
-Supporting large, medium and small screen, realizeing responsive product of playing and practicing and being updating.
+Supporting large, medium and small screen, realizeing responsive product of playing and practicing 
 
-With music information data supporting, users are allowed to get the struction of notation , postion of notation charactor, 
+and being updating.
 
-time serialized midi information and cross-platform notation charactor display resolution.
+With music information data supporting, users are allowed to get the struction of notation ,
+
+postion of notation charactor, time serialized midi information and cross-platform notation charactor display resolution.
 
 
 
